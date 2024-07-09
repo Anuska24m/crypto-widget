@@ -3,16 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binance Crypto Price Widget</title>
+    <title>TradingView Widget</title>
 </head>
 <body>
-    <script src="https://public.bnbstatic.com/unpkg/growth-widget/cryptoCurrencyWidget@0.0.13.min.js"></script>
-    <div class="binance-widget-marquee" 
-         data-cmc-ids="1,1027,1839,5426,3408,52,74,5805,3890,7083" 
-         data-theme="dark" 
-         data-transparent="false" 
-         data-powered-by="Powered by" 
-         data-disclaimer="Disclaimer">
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                <span class="blue-text">Track all markets on TradingView</span>
+            </a>
+        </div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+            "symbols": [
+                {
+                    "proName": "FOREXCOM:SPXUSD",
+                    "title": "S&P 500 Index"
+                },
+                {
+                    "proName": "FOREXCOM:NSXUSD",
+                    "title": "US 100 Cash CFD"
+                },
+                {
+                    "proName": "FX_IDC:EURUSD",
+                    "title": "EUR to USD"
+                },
+                {
+                    "proName": "BITSTAMP:BTCUSD",
+                    "title": "Bitcoin"
+                },
+                {
+                    "proName": "BITSTAMP:ETHUSD",
+                    "title": "Ethereum"
+                }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "colorTheme": "dark",
+            "locale": "en"
+        }
+        </script>
     </div>
+    <!-- TradingView Widget END -->
 </body>
 </html>
